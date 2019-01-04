@@ -18,3 +18,4 @@ A search engine for torrent links, magnet links, and other downloads
 
 
 This is a **WIP** project. As I can't allow much of my time to coding, the development is gonna be slow.
+You can run `index.js` using `node`, but it only shows how the objects are gonna be saved (for now).
