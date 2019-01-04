@@ -1,0 +1,24 @@
+{
+  "name": "rocketsearch",
+  "version": "1.0.0",
+  "description": "Torrent and download links aggregator + search engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "torrent",
+    "download",
+    "link",
+    "aggregator",
+    "search",
+    "engine",
+    "database",
+    "provider"
+  ],
+  "author": "Ryzzzen",
+  "license": "GNU GPLv3",
+  "dependencies": {
+    "rss-parser": "^3.6.1"
+  }
+}

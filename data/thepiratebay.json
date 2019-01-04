@@ -1,0 +1,21 @@
+{
+  "reloadTime": 3600000,
+  "website": "https://pirateproxy.app/",
+  "rssfeeds": [
+    "https://pirateproxy.app/rss//top100/100",
+    "https://pirateproxy.app/rss//top100/200",
+    "https://pirateproxy.app/rss//top100/300",
+    "https://pirateproxy.app/rss//top100/400",
+    "https://pirateproxy.app/rss//top100/500",
+    "https://pirateproxy.app/rss//top100/600"
+  ],
+  "types": {
+    "Applications": 100
+  },
+  "subtypes": {
+    "Windows": 100100
+  },
+  "categories": {
+    "Audio / Music": 200000
+  }
+}

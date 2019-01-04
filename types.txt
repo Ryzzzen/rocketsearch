@@ -1,0 +1,27 @@
+// types
+Applications : 100
+Audio : 200
+Video : 500
+
+// subtypes
+
+-- Applications
+Windows : xxx100
+OS X : xxx200
+Linux : xxx300
+
+App : 100xxx
+Games : 110xxx
+
+-- Audio
+Music: 200000
+
+Format FLAC : 220100
+Format MP3 : 220200
+Format AAC : 220300
+Format WAV : 220400
+
+-- Videos
+TV Shows : 500100
+Movie : 500200
+Porn : 500300
