@@ -2,5 +2,8 @@
   "host": "0.0.0.0",
   "port": "4050",
   "rethinkdb_host": "127.0.0.1",
-  "rethinkdb_port": "28015"
+  "rethinkdb_port": "28015",
+  "rethinkdb_db": "rocketsearch",
+  "rethinkdb_user": "admin",
+  "rethinkdb_pass": ""
 }
