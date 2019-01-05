@@ -53,8 +53,9 @@ class ThePirateBay extends Provider {
 
       let d = feed.items.map(x => {
         return {
+          id: x.torrent.infoHash[0],
           title: x.title,
-          links: { download: x.link, magnet: x.torrent.magnetURI[0], web: x.guid.slice(24) },
+          links: { download: [x.link], magnet: x.torrent.magnetURI, web: [x.guid.slice(24)] },
           author: x.creator,
           uploadDate: Date.parse(x.isoDate),
           categories: x.categories.map(x => self.meta.categories[x._] || x._),
@@ -62,7 +63,7 @@ class ThePirateBay extends Provider {
             infoHash: x.torrent.infoHash[0],
             size: x.torrent.contentLength[0],
             providedBy: self.id,
-            trackerType: 0 // PUBLIC
+            trackerType: 0 /* TPB is a public tracker */
           }
         };
       });
