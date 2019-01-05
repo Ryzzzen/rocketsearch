@@ -19,6 +19,7 @@
   "author": "Ryzzzen",
   "license": "GNU GPLv3",
   "dependencies": {
+    "rethinkdb": "^2.3.3",
     "rss-parser": "^3.6.1"
   }
 }
