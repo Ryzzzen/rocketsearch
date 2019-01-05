@@ -19,6 +19,9 @@
   "author": "Ryzzzen",
   "license": "GNU GPLv3",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
     "rethinkdb": "^2.3.3",
     "rss-parser": "^3.6.1"
   }
