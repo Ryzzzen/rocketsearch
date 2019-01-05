@@ -1,8 +1,15 @@
 const TPB = require('./providers/ThePirateBay');
+const Rocketsearch = new (require('./Rocketsearch'))(require('./config.json'));
 
-let instance = new TPB();
-console.dir(instance);
+(async () => {
+  await Rocketsearch.load();
 
-instance.load().then(x => {
-  instance.run().then(console.dir);
-});
+  let instance = new TPB();
+
+  await instance.load();
+  let torrents = await instance.getTopTorrents();
+
+  console.dir(torrents);
+
+  Rocketsearch._dataManager.insertEntries(torrents);
+})();
