@@ -28,6 +28,9 @@ class DataManager {
       if (!oldDoc.links.web.includes(newDoc.links.web[0]))
         oldDoc.links.web.push(newDoc.links.web[0]);
 
+      if (oldDoc.categories.some(x => isNaN(x)) && newDoc.categories.every(x => !isNaN(x)))
+        oldDoc.categories = newDoc.categories;
+
       return oldDoc;
     }
     else return newDoc;
