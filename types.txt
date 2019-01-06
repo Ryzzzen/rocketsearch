@@ -28,3 +28,9 @@ TV Shows : 500100
 Anime : 500400
 Movie : 500200
 Porn : 500300
+
+-- Books
+ Audiobook: 300100
+ Guide: 300200
+ Book: 300500
+ Other: 300000
