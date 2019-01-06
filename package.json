@@ -21,6 +21,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "magnet-uri": "^5.2.4",
+    "parse-torrent": "^6.1.2",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
     "rethinkdb": "^2.3.3",
