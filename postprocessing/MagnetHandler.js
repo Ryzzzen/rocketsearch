@@ -1,4 +1,5 @@
 const magnet = require('magnet-uri');
+const utils = require('../utils');
 
 class MagnetHandler {
 
@@ -10,7 +11,11 @@ class MagnetHandler {
     doc.id = parsed.infoHash || doc.meta.infoHash || doc.links.web[0];
     doc.title = doc.title || parsed.name;
 
-    return doc;
+    doc.meta.infoHash = parsed.infoHash || doc.meta.infoHash;
+
+    if (utils.isValidSHA1(doc.meta.infoHash))
+      return doc;
+    else return null;
   }
 }
 

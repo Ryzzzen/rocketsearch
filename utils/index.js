@@ -12,5 +12,7 @@ module.exports = {
       });
     });
   },
+  isValidSHA1: s => /^[a-fA-F0-9]{40}$/g.test(s),
+  isValidMD5: s => /^[a-fA-F0-9]{32}$/g.test(s),
   sleep: ms => new Promise(resolve => setTimeout(resolve, ms))
 }
