@@ -7,9 +7,11 @@ const Rocketsearch = new (require('./Rocketsearch'))(require('./config.json'));
   let instance = new TPB();
 
   await instance.load();
-  let torrents = await instance.getTopTorrents();
+  let data = await instance.search('test');
 
-  console.dir(torrents);
+  console.dir(data);
+  data[0] = data[0].map(x => Rocketsearch._magnetHandler.handle(x));
+  console.dir(data);
 
-  Rocketsearch._dataManager.insertEntries(torrents);
+  Rocketsearch._dataManager.insertEntries(data[0]);
 })();
