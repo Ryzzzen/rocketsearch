@@ -16,8 +16,12 @@ class ImportManager {
   async handleImport(Rocketsearch, filePath) {
     console.log(filePath);
 
-    if (path.extname(filePath) === '.openbay') require('./importproviders/OpenBay')(filePath, docs => Rocketsearch._dataManager.insertEntries(docs.map(x => Rocketsearch._magnetHandler.handle(x))));
+    if (path.extname(filePath) === '.openbay') require('./importproviders/OpenBay')(filePath, docs => Rocketsearch._dataManager.insertEntries(docs.map(x => Rocketsearch._magnetHandler.handle(x)).filter(x => x !== null)).catch(this.handleError));
     else console.log('=> Import failed because of unknown extension:', filePath);
+  }
+
+  handleError(err) {
+    console.error(err);
   }
 
   async stop() {
