@@ -2,16 +2,18 @@
 Applications : 100
 Audio : 200
 Video : 500
+Book : 300
 
 // subtypes
 
 -- Applications
-Windows : xxx100
-OS X : xxx200
-Linux : xxx300
+  Windows : xxx100
+  OS X : xxx200
+  Linux : xxx300
+  Other : xxx000
 
-App : 100xxx
-Games : 110xxx
+  App : 100xxx
+  Games : 110xxx
 
 -- Audio
 Music: 200000
@@ -23,5 +25,6 @@ Format WAV : 220400
 
 -- Videos
 TV Shows : 500100
+Anime : 500400
 Movie : 500200
 Porn : 500300
