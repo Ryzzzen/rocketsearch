@@ -18,11 +18,13 @@ class Rocketsearch {
     });
 
     this._dataManager = new (require('./postprocessing/DataManager'))(this.conn);
+    this._importManager = new (require('./postprocessing/ImportManager'))();
 
     this._magnetHandler = new (require('./postprocessing/MagnetHandler'))();
     this._torrentHandler = new (require('./postprocessing/TorrentHandler'))();
 
     await this._torrentHandler.load();
+    await this._importManager.load(this);
   }
 
   async stop() {
